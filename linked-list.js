@@ -107,4 +107,17 @@ export class LinkedList {
     }
     return false;
   }
+
+  find(value) {
+    let currentNode = this.list;
+    let currentIndex = 0;
+    while (currentNode) {
+      if (currentNode.value === value) {
+        return currentIndex;
+      }
+      currentNode = currentNode.nextNode;
+      currentIndex++;
+    }
+    return null;
+  }
 }
