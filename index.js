@@ -111,3 +111,27 @@ console.log(linkedList.at(1));
 
 console.log("get node at last element index");
 console.log(linkedList.at(2));
+
+console.log("");
+
+linkedList = new LinkedList();
+
+console.log("throw error if popping from an empty list");
+try {
+  linkedList.pop();
+} catch (Error) {
+  console.log(Error);
+}
+
+console.log("popping from a list with a single node");
+linkedList.append("A");
+console.log("list before:", linkedList.list);
+linkedList.pop();
+console.log("list after:", linkedList.list);
+
+console.log("popping from a list with multiple nodes");
+linkedList.append("A");
+linkedList.append("B");
+console.log("list before:", linkedList.list);
+linkedList.pop();
+console.log("list after:", linkedList.list);
