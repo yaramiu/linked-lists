@@ -56,3 +56,24 @@ linkedList = new LinkedList();
 linkedList.append("A");
 linkedList.prepend("B");
 console.log(linkedList.head());
+
+console.log("");
+
+linkedList = new LinkedList();
+
+console.log("get tail of empty list");
+console.log(linkedList.tail());
+
+console.log("get tail of list with one node");
+linkedList.append("A");
+console.log(linkedList.tail());
+
+console.log("get tail of multi node list with nodes appended");
+linkedList.append("B");
+console.log(linkedList.tail());
+
+console.log("get tail of multi node list with nodes prepended");
+linkedList = new LinkedList();
+linkedList.append("A");
+linkedList.prepend("B");
+console.log(linkedList.tail());
