@@ -77,3 +77,37 @@ linkedList = new LinkedList();
 linkedList.append("A");
 linkedList.prepend("B");
 console.log(linkedList.tail());
+
+console.log("");
+
+linkedList = new LinkedList();
+
+console.log("throw error if getting a node at an invalid index");
+try {
+  linkedList.at(-1);
+} catch (Error) {
+  console.log(Error);
+}
+try {
+  linkedList.at(1);
+} catch (Error) {
+  console.log(Error);
+}
+try {
+  linkedList.at(0);
+} catch (Error) {
+  console.log(Error);
+}
+
+linkedList.append("A");
+linkedList.append("B");
+linkedList.append("C");
+
+console.log("get node at first element index");
+console.log(linkedList.at(0));
+
+console.log("get node at middle element index");
+console.log(linkedList.at(1));
+
+console.log("get node at last element index");
+console.log(linkedList.at(2));
