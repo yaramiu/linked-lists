@@ -43,4 +43,16 @@ export class LinkedList {
   head() {
     return this.list;
   }
+
+  tail() {
+    if (!this.list) {
+      return this.list;
+    } else {
+      let currentNode = this.list;
+      while (currentNode.nextNode) {
+        currentNode = currentNode.nextNode;
+      }
+      return currentNode;
+    }
+  }
 }
