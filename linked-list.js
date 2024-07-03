@@ -55,4 +55,23 @@ export class LinkedList {
       return currentNode;
     }
   }
+
+  at(index) {
+    if (index < 0 || index > this.size() - 1 || !this.list) {
+      throw new Error(
+        "Index must be non-negative, less than the size of the list, and list cannot be empty"
+      );
+    }
+
+    let currentNode = this.list;
+    let currentIndex = 0;
+    while (currentNode.nextNode) {
+      if (index === currentIndex) {
+        return currentNode;
+      }
+      currentNode = currentNode.nextNode;
+      currentIndex++;
+    }
+    return currentNode;
+  }
 }
