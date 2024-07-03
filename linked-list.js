@@ -39,4 +39,8 @@ export class LinkedList {
       return numNodes;
     }
   }
+
+  head() {
+    return this.list;
+  }
 }
