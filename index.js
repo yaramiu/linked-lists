@@ -41,3 +41,24 @@ console.log(linkedList.size());
 console.log("size of list with multiple nodes");
 linkedList.append("B");
 console.log(linkedList.size());
+
+console.log("");
+
+linkedList = new LinkedList();
+
+console.log("get head of empty list");
+console.log(linkedList.head());
+
+console.log("get head of list with one node");
+linkedList.append("A");
+console.log(linkedList.head());
+
+console.log("get head of multi node list with nodes appended");
+linkedList.append("B");
+console.log(linkedList.head());
+
+console.log("get head of multi node list with nodes prepended");
+linkedList = new LinkedList();
+linkedList.append("A");
+linkedList.prepend("B");
+console.log(linkedList.head());
