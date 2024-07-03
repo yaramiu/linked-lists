@@ -135,3 +135,24 @@ linkedList.append("B");
 console.log("list before:", linkedList.list);
 linkedList.pop();
 console.log("list after:", linkedList.list);
+
+console.log("");
+
+linkedList = new LinkedList();
+
+console.log("empty list does not contain any value");
+console.log(linkedList.contains("A"));
+
+console.log("single node list contains value");
+linkedList.append("A");
+console.log(linkedList.contains("A"));
+
+console.log("single node list does not contain value");
+console.log(linkedList.contains("B"));
+
+console.log("multi node list contains value");
+linkedList.append("B");
+console.log(linkedList.contains("B"));
+
+console.log("multi node list does not contain value");
+console.log(linkedList.contains("C"));
