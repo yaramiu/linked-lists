@@ -86,17 +86,17 @@ console.log("throw error if getting a node at an invalid index");
 try {
   linkedList.at(-1);
 } catch (Error) {
-  console.log(Error);
+  console.error(Error);
 }
 try {
   linkedList.at(1);
 } catch (Error) {
-  console.log(Error);
+  console.error(Error);
 }
 try {
   linkedList.at(0);
 } catch (Error) {
-  console.log(Error);
+  console.error(Error);
 }
 
 linkedList.append("A");
@@ -120,7 +120,7 @@ console.log("throw error if popping from an empty list");
 try {
   linkedList.pop();
 } catch (Error) {
-  console.log(Error);
+  console.error(Error);
 }
 
 console.log("popping from a list with a single node");
