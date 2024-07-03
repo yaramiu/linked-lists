@@ -94,10 +94,6 @@ export class LinkedList {
   }
 
   contains(value) {
-    if (!this.list) {
-      return false;
-    }
-
     let currentNode = this.list;
     while (currentNode) {
       if (currentNode.value === value) {
