@@ -92,4 +92,19 @@ export class LinkedList {
     }
     return lastNode;
   }
+
+  contains(value) {
+    if (!this.list) {
+      return false;
+    }
+
+    let currentNode = this.list;
+    while (currentNode) {
+      if (currentNode.value === value) {
+        return true;
+      }
+      currentNode = currentNode.nextNode;
+    }
+    return false;
+  }
 }
