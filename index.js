@@ -26,3 +26,18 @@ linkedList.prepend("B");
 console.log(linkedList.list.value);
 console.log(linkedList.list.nextNode.value);
 console.log(linkedList.list.nextNode.nextNode);
+
+console.log("");
+
+linkedList = new LinkedList();
+
+console.log("size of empty list");
+console.log(linkedList.size());
+
+console.log("size of list with single node");
+linkedList.append("A");
+console.log(linkedList.size());
+
+console.log("size of list with multiple nodes");
+linkedList.append("B");
+console.log(linkedList.size());

@@ -25,4 +25,18 @@ export class LinkedList {
       this.list = newNode;
     }
   }
+
+  size() {
+    if (!this.list) {
+      return 0;
+    } else {
+      let numNodes = 1;
+      let currentNode = this.list;
+      while (currentNode.nextNode) {
+        currentNode = currentNode.nextNode;
+        numNodes++;
+      }
+      return numNodes;
+    }
+  }
 }
