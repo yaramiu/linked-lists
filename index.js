@@ -156,3 +156,28 @@ console.log(linkedList.contains("B"));
 
 console.log("multi node list does not contain value");
 console.log(linkedList.contains("C"));
+
+console.log("");
+
+linkedList = new LinkedList();
+
+console.log("cannot find index of empty list");
+console.log(linkedList.find("A"));
+
+console.log("find index of a value that exists in a single node list");
+linkedList.append("A");
+console.log(linkedList.find("A"));
+
+console.log(
+  "cannot find index of a value that does not exist in a single node list"
+);
+console.log(linkedList.find("B"));
+
+console.log("find index of a value that exists in a multi node list");
+linkedList.append("B");
+console.log(linkedList.find("B"));
+
+console.log(
+  "cannot find index of a value that does not exist in a multi node list"
+);
+console.log(linkedList.find("C"));
