@@ -74,4 +74,22 @@ export class LinkedList {
     }
     return currentNode;
   }
+
+  pop() {
+    if (!this.list) {
+      throw new Error("Cannot pop from an empty list");
+    }
+
+    const lastNode = this.tail();
+    if (this.size() === 1) {
+      this.list = null;
+    } else {
+      let currentNode = this.list;
+      while (currentNode.nextNode !== lastNode) {
+        currentNode = currentNode.nextNode;
+      }
+      currentNode.nextNode = null;
+    }
+    return lastNode;
+  }
 }
