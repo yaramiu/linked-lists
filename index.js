@@ -196,3 +196,41 @@ console.log(linkedList.toString());
 console.log("print list with multiple nodes");
 linkedList.append("B");
 console.log(linkedList.toString());
+
+console.log("");
+
+linkedList = new LinkedList();
+
+console.log("throw error if inserting with an invalid index");
+try {
+  linkedList.insertAt("A", -1);
+} catch (Error) {
+  console.error(Error);
+}
+try {
+  linkedList.insertAt("A", 1);
+} catch (Error) {
+  console.error(Error);
+}
+try {
+  linkedList.insertAt("A", 0);
+} catch (Error) {
+  console.error(Error);
+}
+
+console.log("insert at first element index");
+linkedList.append("A");
+console.log("list before:", linkedList.toString());
+linkedList.insertAt("B", 0);
+console.log("list after:", linkedList.toString());
+
+console.log("insert at middle element index");
+linkedList.prepend("C");
+console.log("list before:", linkedList.toString());
+linkedList.insertAt("D", 1);
+console.log("list after:", linkedList.toString());
+
+console.log("insert at last element index");
+console.log("list before:", linkedList.toString());
+linkedList.insertAt("E", 3);
+console.log("list after:", linkedList.toString());
