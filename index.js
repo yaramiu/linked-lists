@@ -234,3 +234,49 @@ console.log("insert at last element index");
 console.log("list before:", linkedList.toString());
 linkedList.insertAt("E", 3);
 console.log("list after:", linkedList.toString());
+
+console.log("");
+
+linkedList = new LinkedList();
+
+console.log("remove at an invalid index");
+try {
+  linkedList.removeAt(-1);
+} catch (Error) {
+  console.error(Error);
+}
+try {
+  linkedList.removeAt(1);
+} catch (Error) {
+  console.error(Error);
+}
+try {
+  linkedList.removeAt(0);
+} catch (Error) {
+  console.error(Error);
+}
+
+console.log("remove at first element index from single node list");
+linkedList.append("A");
+console.log("list before:", linkedList.toString());
+linkedList.removeAt(0);
+console.log("list after:", linkedList.toString());
+
+console.log("remove at first element index from multi node list");
+linkedList.append("A");
+linkedList.append("B");
+console.log("list before:", linkedList.toString());
+linkedList.removeAt(0);
+console.log("list after:", linkedList.toString());
+
+console.log("remove at middle element index");
+linkedList.prepend("A");
+linkedList.append("C");
+console.log("list before:", linkedList.toString());
+linkedList.removeAt(1);
+console.log("list after:", linkedList.toString());
+
+console.log("remove at last element index");
+console.log("list before:", linkedList.toString());
+linkedList.removeAt(1);
+console.log("list after:", linkedList.toString());
