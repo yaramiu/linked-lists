@@ -153,4 +153,31 @@ export class LinkedList {
       currentIndex++;
     }
   }
+
+  removeAt(index) {
+    if (index < 0 || index > this.size() - 1 || !this.list) {
+      throw new Error(
+        "Index must be non-negative, less than the size of the list, and list cannot be empty"
+      );
+    }
+
+    let currentNode = this.list;
+    let previousNode = currentNode;
+    let currentIndex = 0;
+    while (currentNode) {
+      if (currentIndex === index) {
+        if (currentNode === this.head()) {
+          this.list = currentNode.nextNode;
+        } else if (currentNode === this.tail()) {
+          previousNode.nextNode = null;
+        } else {
+          previousNode.nextNode = currentNode.nextNode;
+        }
+        return;
+      }
+      previousNode = currentNode;
+      currentNode = currentNode.nextNode;
+      currentIndex++;
+    }
+  }
 }
