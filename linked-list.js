@@ -127,4 +127,30 @@ export class LinkedList {
     strRepresentation += "null";
     return strRepresentation;
   }
+
+  insertAt(value, index) {
+    if (index < 0 || index > this.size() - 1 || !this.list) {
+      throw new Error(
+        "Index must be non-negative, less than the size of the list, and list cannot be empty"
+      );
+    }
+
+    const newNode = new Node(value);
+    let currentNode = this.list;
+    let previousNode = currentNode;
+    let currentIndex = 0;
+    while (currentNode) {
+      if (currentIndex === index && previousNode === currentNode) {
+        this.list = newNode;
+        newNode.nextNode = currentNode;
+        return;
+      } else if (currentIndex === index && previousNode !== currentNode) {
+        previousNode.nextNode = newNode;
+        newNode.nextNode = currentNode;
+      }
+      previousNode = currentNode;
+      currentNode = currentNode.nextNode;
+      currentIndex++;
+    }
+  }
 }
