@@ -181,3 +181,18 @@ console.log(
   "cannot find index of a value that does not exist in a multi node list"
 );
 console.log(linkedList.find("C"));
+
+console.log("");
+
+linkedList = new LinkedList();
+
+console.log("print empty list");
+console.log(linkedList.toString());
+
+console.log("print list with one node");
+linkedList.append("A");
+console.log(linkedList.toString());
+
+console.log("print list with multiple nodes");
+linkedList.append("B");
+console.log(linkedList.toString());
