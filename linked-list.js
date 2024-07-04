@@ -116,4 +116,15 @@ export class LinkedList {
     }
     return null;
   }
+
+  toString() {
+    let strRepresentation = "";
+    let currentNode = this.list;
+    while (currentNode) {
+      strRepresentation += `( ${String(currentNode.value)} ) -> `;
+      currentNode = currentNode.nextNode;
+    }
+    strRepresentation += "null";
+    return strRepresentation;
+  }
 }
